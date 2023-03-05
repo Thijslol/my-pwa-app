@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import myIcon from 'assets/my-icon.png';
-import {Image} from "expo-image";
+import myIcon from './assets/my-icon.png';
+import * as React from 'react';
+import {useState} from "react";
 
 export default function App() {
   const [backgroundColor, setBackgroundColor] = useState('#FFFFFF');
@@ -13,7 +13,6 @@ export default function App() {
 
   return (
       <View style={[styles.container, { backgroundColor }]}>
-        <Image source={myIcon} style={{ width: 200, height: 200 }} />
         <TouchableOpacity onPress={handlePress}>
           <Text style={styles.button}>Change Color</Text>
         </TouchableOpacity>
